@@ -52,7 +52,7 @@ class Client:
         headers = {}
 
         for l in data.splitlines():
-            parts = l.split(": ", 1)
+            parts = l.decode('utf-8').split(": ", 1)
 
             if len(parts) == 2:
                 headers[parts[0]] = parts[1]
